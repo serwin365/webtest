@@ -9,12 +9,18 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Head from './components/head.vue'
+import $ from 'jquery'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Head
+  },
+  mounted () {
+    $('img').click(function () {
+      $(this).hide(1000)
+    })
   }
 }
 </script>
